@@ -1,0 +1,32 @@
+<div class="header">
+  <img
+    class="logo"
+    src="https://www.familytreedna.com/common/img/header-footer/assets/ftdna-brand.svg"
+  />
+  <div class="ui">UI</div>
+</div>
+
+<p>
+  Family Tree DNA UI is mostly based on Angular Material components with a
+  custom theme. This site is intended to showcase and document FTDNA's UX design
+  system.
+</p>
+
+<div class="container" fxLayout="row wrap">
+  <mat-card *ngFor="let item of items">
+    <mat-card-title>{{ item.title }}</mat-card-title>
+    <mat-card-content>
+      <p>
+        {{ item.description }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="item.linkTo()">
+        Examples
+      </button>
+      <a mat-button color="accent" [href]="item.matDoc" *ngIf="item.matDoc!==null" target="_blank">
+        Mat Docs
+      </a>
+    </mat-card-actions>
+  </mat-card>
+</div>

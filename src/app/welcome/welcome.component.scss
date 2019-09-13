@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  margin-bottom: 2em;
+  justify-content: center;
+  .logo {
+    display: block;
+    height: 200px;
+  }
+  .ui {
+    font-size: 55px;
+    color: #505759;
+    align-self: flex-end;
+    line-height: 59px;
+  }
+}
+.container{
+  padding: 10px;
+  mat-card {
+    width: calc(33vw - 75px);
+    margin: 5px;
+  }
+}
+

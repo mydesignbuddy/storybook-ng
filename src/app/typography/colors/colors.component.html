@@ -1,0 +1,25 @@
+<h1>Theme Colors</h1>
+<p>
+  <a
+    mat-button
+    mat-raised-button
+    color="primary"
+    href="https://material.angular.io/guide/theming-your-components#note-using-the-code-mat-color-code-function-to-extract-colors-from-a-palette"
+    >Material Docs</a
+  >
+</p>
+
+<div fxLayout="row wrap">
+  <mat-card
+    class="color"
+    *ngFor="let color of colors"
+  >
+    <p>
+      <code>{{ color }}</code>
+      <span class="ftdna-color" *ngIf="['primary', 'accent', 'warn'].includes(color)">FTDNA Theme Color</span>
+    </p>
+    <div *ngFor="let shade of shades" [class]="'swatch ' + color + '-' + shade">
+      {{ shade }}
+    </div>
+  </mat-card>
+</div>

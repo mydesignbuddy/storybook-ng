@@ -1,0 +1,94 @@
+// @import '~@angular/material/theming';
+@import "../../../material-theme.scss";
+
+.color {
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.swatch {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 2.5em;
+  padding: 0.25em;
+  margin-right: 3px;
+}
+
+.ftdna-color {
+  background: #777;
+  padding: 0.25em 0.75em;
+  font-size: 0.75em;
+  border-radius: 1em;
+  color: #fff;
+}
+
+code {
+  font-size: 14px;
+  letter-spacing: 0.0125em;
+  background-color: #eee;
+  padding: 0.25em 0.5em;
+  margin: 0;
+  line-height: 0;
+  margin-right: 0.5em;
+}
+
+@mixin from-palette($color, $color-name) {
+  $_palette: mat-palette($color);
+
+  .#{$color-name}-50 {
+    background-color: mat-color($_palette, 50);
+    color: mat-color($_palette, "50-contrast");
+  }
+
+  $i: 100;
+  @while $i < 1000 {
+    .#{$color-name}-#{$i} {
+      background-color: mat-color($_palette, $i);
+      color: mat-color($_palette, "#{$i}-contrast");
+    }
+    $i: $i + 100;
+  }
+
+  .#{$color-name}-A100 {
+    background-color: mat-color($_palette, "A100");
+    color: mat-color($_palette, "A100-contrast");
+  }
+  .#{$color-name}-A200 {
+    background-color: mat-color($_palette, "A200");
+    color: mat-color($_palette, "A200-contrast");
+  }
+  .#{$color-name}-A400 {
+    background-color: mat-color($_palette, "A400");
+    color: mat-color($_palette, "A400-contrast");
+  }
+  .#{$color-name}-A700 {
+    background-color: mat-color($_palette, "A700");
+    color: mat-color($_palette, "A700-contrast");
+  }
+}
+
+@include from-palette($primary-palette, "primary");
+@include from-palette($secondary-palette, "accent");
+@include from-palette($warn-palette, "warn");
+
+@include from-palette($mat-red, "red");
+@include from-palette($mat-pink, "pink");
+@include from-palette($mat-purple, "purple");
+@include from-palette($mat-deep-purple, "deep-purple");
+@include from-palette($mat-indigo, "indigo");
+@include from-palette($mat-blue, "blue");
+@include from-palette($mat-light-blue, "light-blue");
+@include from-palette($mat-cyan, "cyan");
+@include from-palette($mat-teal, "teal");
+@include from-palette($mat-green, "green");
+@include from-palette($mat-light-green, "light-green");
+@include from-palette($mat-lime, "lime");
+@include from-palette($mat-yellow, "yellow");
+@include from-palette($mat-amber, "amber");
+@include from-palette($mat-orange, "orange");
+@include from-palette($mat-deep-orange, "deep-orange");
+@include from-palette($mat-brown, "brown");
+@include from-palette($mat-grey, "grey");
+@include from-palette($mat-blue-grey, "blue-grey");
