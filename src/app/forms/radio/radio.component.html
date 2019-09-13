@@ -1,1 +1,22 @@
-<p>radio coming soon!</p>
+<h1>Radio</h1>
+
+<p>
+  <a
+    mat-button
+    mat-raised-button
+    color="primary"
+    href="https://material.angular.io/components/radio/overview"
+    >Material Docs</a
+  >
+</p>
+
+<label id="example-radio-group-label">Pick your favorite season</label>
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="favoriteSeason">
+  <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+    {{season}}
+  </mat-radio-button>
+</mat-radio-group>
+<div>Your favorite season is: {{favoriteSeason}}</div>
