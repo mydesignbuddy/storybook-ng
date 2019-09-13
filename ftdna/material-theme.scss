@@ -1,0 +1,65 @@
+/** Originally located familytreedna.com/FTDNA.Web.Common/css/material-theme.scss but need
+  * local copy for storybook build. Please update this file with the original when needed.
+  */
+
+$primary-palette: ( 50 : #fee9e3, 100 : #fec8b9, 200 : #fda38b, 300 : #fc7e5c, 400 : #fb6239, 500 : #fa4616, 600 : #f93f13, 700 : #f93710, 800 : #f82f0c, 900 : #f62006, A100 : #ffffff, A200 : #ffeceb, A400 : #ffbdb8, A700 : #ffa59e, contrast: ( 50 : #000000, 100 : #000000, 200 : #000000, 300 : #000000, 400 : #000000, 500 : #ffffff, 600 : #ffffff, 700 : #ffffff, 800 : #ffffff, 900 : #ffffff, A100 : #000000, A200 : #000000, A400 : #000000, A700 : #000000, ) );
+$secondary-palette: ( 50 : #e0e9f3, 100 : #b3c9e0, 200 : #80a5cc, 300 : #4d80b7, 400 : #2665a7, 500 : #004a98, 600 : #004390, 700 : #003a85, 800 : #00327b, 900 : #00226a,A100 : #99b1ff, A200 : #668aff, A400 : #3363ff, A700 : #1a4fff, contrast: ( 50 : #000000, 100 : #000000, 200 : #000000, 300 : #ffffff, 400 : #ffffff, 500 : #ffffff, 600 : #ffffff, 700 : #ffffff, 800 : #ffffff, 900 : #ffffff, A100 : #000000, A200 : #000000, A400 : #ffffff, A700 : #ffffff, ) );
+$warn-palette: ( 50 : #fde5e7, 100 : #fabec3, 200 : #f7939b, 300 : #f36873, 400 : #f14755, 500 : #ee2737, 600 : #ec2331, 700 : #e91d2a, 800 : #e71723, 900 : #e20e16, A100 : #ffffff, A200 : #ffdadb, A400 : #ffa7aa, A700 : #ff8e91, contrast: ( 50 : #000000, 100 : #000000, 200 : #000000, 300 : #000000, 400 : #ffffff, 500 : #ffffff, 600 : #ffffff, 700 : #ffffff, 800 : #ffffff, 900 : #ffffff, A100 : #000000, A200 : #000000, A400 : #000000, A700 : #000000, ) );
+
+
+
+$custom-theme-primary: mat-palette($primary-palette);
+$custom-theme-accent: mat-palette($secondary-palette);
+$custom-theme-warn: mat-palette($warn-palette);
+
+$custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+
+@mixin custom-theme($theme) {
+
+}
+
+@mixin mat-checkbox-theme($theme) {
+  .mat-checkbox-checked {
+    .mat-checkbox-background {
+        background-color: #004C97 !important;
+    }
+  }
+
+  .mat-checkbox-layout {
+      margin-bottom: 0;
+  }
+
+  .mat-checkbox-inner-container {
+      height: 18px !important;
+      width: 18px !important;
+  }
+
+  .mat-checkbox-frame {
+      border-color: rgba($color: #212121, $alpha: 0.8)
+  }
+}
+
+
+@mixin mat-table-theme($theme) {
+    .mat-header-row {
+        height: 40px !important;
+        background-color: #505759;
+
+        .mat-header-cell, .mat-sort-header-arrow {
+            color: #ffffff;
+            background-color: #505759;
+        }
+    }
+
+    .mat-row {
+        .mat-cell {
+            border-color: rgba($color: #212121, $alpha: 0.17);
+            font-size: 14px;
+        }
+    }
+}
+
+@include mat-table-theme($custom-theme);
+@include mat-checkbox-theme($custom-theme);
+@include angular-material-theme($custom-theme);
+@include custom-theme($custom-theme);
