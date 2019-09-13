@@ -46,6 +46,7 @@ import { SnackbarComponent } from './popups-modals/snackbar/snackbar.component';
 import { TooltipComponent } from './popups-modals/tooltip/tooltip.component';
 import { MaterialtypographyComponent } from './typography/materialtypography/materialtypography.component';
 import { ColorsComponent } from './typography/colors/colors.component';
+import { ChipinputComponent } from './buttons-indicators/chips/chipinput/chipinput.component';
 
 
 @NgModule({
@@ -90,6 +91,7 @@ import { ColorsComponent } from './typography/colors/colors.component';
     TooltipComponent,
     MaterialtypographyComponent,
     ColorsComponent,
+    ChipinputComponent,
   ],
   imports: [
     BrowserModule,
