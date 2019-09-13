@@ -1,1 +1,20 @@
-<p>icon coming soon!</p>
+<h1>Icons</h1>
+
+<p>
+  <a
+    mat-button
+    mat-raised-button
+    color="primary"
+    href="https://material.angular.io/components/icon/overview"
+    >Material Docs</a
+  >
+</p>
+
+<div class="icons" fxLayout="row wrap">
+  <mat-card class="icon-container" *ngFor="let icon of icons" fxLayout="column" fxLayoutAlign="space-evenly center">
+    <mat-icon>
+      {{ icon }}
+    </mat-icon>
+    <div class="label" [matTooltip]="icon">{{ icon }}</div>
+  </mat-card>
+</div>

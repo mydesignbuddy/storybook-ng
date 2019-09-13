@@ -1,0 +1,21 @@
+.mat-icon {
+  font-size: 35px;
+  width: 35px;
+  height: 35px;
+}
+
+.icon-container {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  .label{
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+
+    width: calc(100px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+  }
+}
