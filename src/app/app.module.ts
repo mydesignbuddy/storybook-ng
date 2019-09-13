@@ -47,6 +47,8 @@ import { TooltipComponent } from './popups-modals/tooltip/tooltip.component';
 import { MaterialtypographyComponent } from './typography/materialtypography/materialtypography.component';
 import { ColorsComponent } from './typography/colors/colors.component';
 import { ChipinputComponent } from './buttons-indicators/chips/chipinput/chipinput.component';
+import { BasicExpansionComponent } from './layout/expansion-panel/basic-expansion/basic-expansion.component';
+import { AccordionComponent } from './layout/expansion-panel/accordion/accordion.component';
 
 
 @NgModule({
@@ -92,6 +94,8 @@ import { ChipinputComponent } from './buttons-indicators/chips/chipinput/chipinp
     MaterialtypographyComponent,
     ColorsComponent,
     ChipinputComponent,
+    BasicExpansionComponent,
+    AccordionComponent,
   ],
   imports: [
     BrowserModule,
