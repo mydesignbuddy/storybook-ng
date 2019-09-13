@@ -49,6 +49,8 @@ import { ColorsComponent } from './typography/colors/colors.component';
 import { ChipinputComponent } from './buttons-indicators/chips/chipinput/chipinput.component';
 import { BasicExpansionComponent } from './layout/expansion-panel/basic-expansion/basic-expansion.component';
 import { AccordionComponent } from './layout/expansion-panel/accordion/accordion.component';
+import { BasicStepperComponent } from './layout/stepper/basic-stepper/basic-stepper.component';
+import { VerticalStepperComponent } from './layout/stepper/vertical-stepper/vertical-stepper.component';
 
 
 @NgModule({
@@ -96,6 +98,8 @@ import { AccordionComponent } from './layout/expansion-panel/accordion/accordion
     ChipinputComponent,
     BasicExpansionComponent,
     AccordionComponent,
+    BasicStepperComponent,
+    VerticalStepperComponent,
   ],
   imports: [
     BrowserModule,
