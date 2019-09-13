@@ -47,14 +47,14 @@ storiesOf('Buttons & Indicators', module).add('Icon', () => ({
 }));
 
 storiesOf('Buttons & Indicators', module).add('Progress spinner', () => ({
-  component: ProgressBarComponent,
+  component: ProgressSpinnerComponent,
   moduleMetadata: {
     imports: [AppModule]
   }
 }));
 
 storiesOf('Buttons & Indicators', module).add('Progress bar', () => ({
-  component: ProgressSpinnerComponent,
+  component: ProgressBarComponent,
   moduleMetadata: {
     imports: [AppModule]
   }
